@@ -75,7 +75,7 @@ Distance away from a major employer has a negative effect on the estimated price
 
 ## Next Steps
 
-Identify other options instead of the defined 10 districts.<br>
+Identify other location options instead of the defined 10 districts.<br>
 Is the OLS the best model to use for this data?  Identify other models to use with multiple regression.<br>
 
 ## For More Information
