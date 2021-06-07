@@ -1,5 +1,5 @@
 # HomeRegression
-Regression modeling to analyze house sales in a northwestern county Phase2 Flatiron
+
 
 ![neighborhood.jfif](./images/neighborhood.jfif?raw=true)
 
