@@ -63,14 +63,6 @@ The log(price) is equal to 8.1479 <br>
 
 A significant interaction we included is the distance multiplied by the existance of d_nseattle_9 category.
 
-![image.png](./images/image.png?raw=true)
-
-More Results...<br>
-![image2.png](./images/image2.png?raw=true)
-
-More Results...<br>
-![image3.png](./images/image3.png?raw=true)
-
 ## Conclusions
 
 We have observed with our analysis that the districts of N Seattle and Mercer Island increase the estimated house price the most in regard to the 10 districts.
