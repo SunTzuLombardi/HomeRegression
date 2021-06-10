@@ -40,8 +40,15 @@ sqft_lot15 - The avg square footage of the land lots of the nearest 15 neighbors
 
 We performed Inferential Analysis on over 21,00 home sales from Kings County and by removing any data with a outliers which had a z score larger than 3.  In a normal distribution 99% or all data falls with a z score of under 3.  
 We also performed a multiple regression analysis which allows us to build a pricing model and assess the strength and relationship and importance of the different features and their relation to an estimate price of a property.
-A new feature we created was distance from four major employment locations in Kings County.
+
+A new feature we created was distance from four major employment locations in Kings County.  
+Using the haversine formlula mentioned in the following blogs as reference: https://abeflansburg.medium.com/distance-between-two-sets-of-geographic-coordinates-latitude-longitude-in-ruby-js-sql-and-37c3584cb9ad
+https://dev.to/upwardtrajectory/engineering-location-features-with-haversine-s-formula-for-prediction-modeling-23n2
+https://towardsdatascience.com/heres-how-to-calculate-distance-between-2-geolocations-in-python-93ecab5bbba4
+, I adjusted the approach to measure the distance from the top four employers instead of two cities.
+
 We also created the district feature to divid the county into 10 separate districts based on zipcodes.
+
 We also binned the Grade category into 3 bins, Low grade <=6, Medium 6-8, Hight Grade >8 to 13.
 
 ## Results
