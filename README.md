@@ -45,7 +45,7 @@ A new feature we created was distance from four major employment locations in Ki
 Using the haversine formlula mentioned in the following blogs as reference:<br>
 [Blog1](https://abeflansburg.medium.com/distance-between-two-sets-of-geographic-coordinates-latitude-longitude-in-ruby-js-sql-and-37c3584cb9ad)<br>
 [Blog2](https://dev.to/upwardtrajectory/engineering-location-features-with-haversine-s-formula-for-prediction-modeling-23n2)<br>
-[Blog3](https://towardsdatascience.com/heres-how-to-calculate-distance-between-2-geolocations-in-python-93ecab5bbba4<br>
+[Blog3](https://towardsdatascience.com/heres-how-to-calculate-distance-between-2-geolocations-in-python-93ecab5bbba4)<br>
 , I adjusted the approach to measure the distance from the top four employers instead of two cities.
 
 We also created the district feature to divid the county into 10 separate districts based on zipcodes.
