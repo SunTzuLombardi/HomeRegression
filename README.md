@@ -56,7 +56,7 @@ We also binned the Grade category into 3 bins, Low grade <=6, Medium 6-8, Hight 
 ## Results
 
 Our Model accounts for 80% of variance in the pricing data.  
-$ log(price) = 8.1479 - 0.027 * (bedrooms) + 0.0464 * (bathrooms)
+$$ log(price) = 8.1479 - 0.027 * (bedrooms) + 0.0464 * (bathrooms)
              + 0.0007 * (age)              + 0.1495 * (view_1)
              + 0.1371 * (view_2)           + 0.5490 * log(sqft_living)
              + 0.0606 * log(sqft_living15)
@@ -67,7 +67,7 @@ $ log(price) = 8.1479 - 0.027 * (bedrooms) + 0.0464 * (bathrooms)
              + 0.6783 * (d_nseattle_9)     + 0.2568 * (d_redmond_8)
              - 0.0420 * (d_renton_5) 
              + 0.0940 * (d_serural_2)      +  0.1877 * (**d_vi_4**)
-             - 0.0546 * (distance * d_nseattle_9) $ 
+             - 0.0546 * (distance * d_nseattle_9) $$
 
 A significant interaction we included is the distance multiplied by the existance of d_nseattle_9 category.
 
