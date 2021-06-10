@@ -40,26 +40,34 @@ sqft_lot15 - The avg square footage of the land lots of the nearest 15 neighbors
 
 We performed Inferential Analysis on over 21,00 home sales from Kings County and by removing any data with a outliers which had a z score larger than 3.  In a normal distribution 99% or all data falls with a z score of under 3.  
 We also performed a multiple regression analysis which allows us to build a pricing model and assess the strength and relationship and importance of the different features and their relation to an estimate price of a property.
-A new feature we created was distance from four major employment locations in Kings County.
-We also created the district feature to divid the county into 10 separate districts based on zipcodes.
+
+A new feature we created was distance from four major employment locations in Kings County.  
+Using the haversine formlula mentioned in the following blogs as reference:<br>
+[Blog1](https://abeflansburg.medium.com/distance-between-two-sets-of-geographic-coordinates-latitude-longitude-in-ruby-js-sql-and-37c3584cb9ad)<br>
+[Blog2](https://dev.to/upwardtrajectory/engineering-location-features-with-haversine-s-formula-for-prediction-modeling-23n2)<br>
+[Blog3](https://towardsdatascience.com/heres-how-to-calculate-distance-between-2-geolocations-in-python-93ecab5bbba4)<br>
+, I adjusted the approach to measure the distance from the top four employers instead of two cities.
+
+We also created the district feature to divid the county into 10 separate districts based on zipcodes.<br>
+![districts.png](./images/districts.png?raw=true)<br>
+
 We also binned the Grade category into 3 bins, Low grade <=6, Medium 6-8, Hight Grade >8 to 13.
 
 ## Results
 
 Our Model accounts for 80% of variance in the pricing data.  
-The log(price) is equal to 8.1479 <br>
--0.02722363 * (bedrooms) + .04637777 * (bathrooms)<br>
-+ 0.00074775 * (age) + 0.14952887 * (view_1)<br>
-+ 0.13703141 * (view_2) + 0.54902297 * log(sqft_living)<br>
-+ 0.06060631 * log(sqft_living15)<br>
-- 0.02257943 * (distance) + 0.09696137 * (grade_6_8)<br>
-+ 0.2341256 * (grade_8_13)<br>
-+ 0.20976453 * (d_anerural_1) + 0.40560228 * (d_bellvue_7)<br>
-+ 0.21335096 * (d_dtseattle_10) + 0.62208309 * (d_mercer_6)<br>
-+ 0.67828833 * (d_nseattle_9) + 0.25678864 * (d_redmond_8)<br>
-- 0.04204509 * (d_renton_5)<br>
-+ 0.09428725 * (d_serural_2) + 0.18774062 * (d_vi_4)<br>
--0.05456986 * (distance * d_nseattle_9)<br>
+$$ log(price) = 8.1479 - 0.027 * (bedrooms) + 0.0464 * (bathrooms)
+             + 0.0007 * (age)              + 0.1495 * (view_1)
+             + 0.1371 * (view_2)           + 0.5490 * log(sqft_living)
+             + 0.0606 * log(sqft_living15)
+             - 0.0226 * (distance)         + 0.0970 * (grade_6_8) 
+             + 0.2341 * (grade_8_13) 
+             + 0.2098 * (d_anerural_1)     + 0.4056 * (d_bellvue_7)
+             + 0.2134 * (d_dtseattle_10)   + 0.6221 * (d_mercer_6)
+             + 0.6783 * (d_nseattle_9)     + 0.2568 * (d_redmond_8)
+             - 0.0420 * (d_renton_5) 
+             + 0.0940 * (d_serural_2)      +  0.1877 * (**d_vi_4**)
+             - 0.0546 * (distance * d_nseattle_9) $$
 
 A significant interaction we included is the distance multiplied by the existance of d_nseattle_9 category.
 
