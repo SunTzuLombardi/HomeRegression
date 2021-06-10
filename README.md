@@ -46,8 +46,8 @@ Using the haversine formlula mentioned in the following blogs as reference:<br>
 [Blog1](https://abeflansburg.medium.com/distance-between-two-sets-of-geographic-coordinates-latitude-longitude-in-ruby-js-sql-and-37c3584cb9ad)<br>
 [Blog2](https://dev.to/upwardtrajectory/engineering-location-features-with-haversine-s-formula-for-prediction-modeling-23n2)<br>
 [Blog3](https://towardsdatascience.com/heres-how-to-calculate-distance-between-2-geolocations-in-python-93ecab5bbba4)<br>
-, I adjusted the approach to measure the distance from the top four employers instead of two cities.
-
+, I adjusted the approach to measure the distance from the top four employers instead of two cities.<br>
+![kingsEmployers.png](./images/kingsEmployers.png?raw=true)
 We also created the district feature to divid the county into 10 separate districts based on zipcodes.<br>
 ![districts.png](./images/districts.png?raw=true)<br>
 
@@ -70,6 +70,7 @@ $$ log(price) = 8.1479 - 0.027 * (bedrooms) + 0.0464 * (bathrooms)
              - 0.0546 * (distance * d_nseattle_9) $$
 
 A significant interaction we included is the distance multiplied by the existance of d_nseattle_9 category.
+
 
 ## Conclusions
 
