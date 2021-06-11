@@ -38,7 +38,7 @@ sqft_lot15 - The avg square footage of the land lots of the nearest 15 neighbors
 
 ## Methods
 
-We performed Inferential Analysis on over 21,00 home sales from Kings County and by removing any data with a outliers which had a z score larger than 3.  In a normal distribution 99% or all data falls with a z score of under 3.  
+We performed Inferential Analysis on over 21,000 home sales from Kings County and by removing any data with a outliers which had a z score larger than 3.  In a normal distribution 99% or all data falls with a z score of under 3.  
 We also performed a multiple regression analysis which allows us to build a pricing model and assess the strength and relationship and importance of the different features and their relation to an estimate price of a property.
 
 A new feature we created was distance from four major employment locations in Kings County.  
@@ -70,6 +70,8 @@ $$ log(price) = 8.1479 - 0.027 * (bedrooms) + 0.0464 * (bathrooms)
              - 0.0546 * (distance * d_nseattle_9) $$
 
 A significant interaction we included is the distance multiplied by the existance of d_nseattle_9 category.
+![qqplotfinal.png](./images/qqplotfinal.png?raw=true)<br>
+Final RMSE of 112742
 
 
 ## Conclusions
